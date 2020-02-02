@@ -1,0 +1,16 @@
+[tool.black]
+# How many characters per line to allow.
+line-length = 119
+
+# A regular expression that matches files and directories that
+# should be included on recursive searches. An empty value means
+# all files are included regardless of the name.  Use forward
+# slashes for directories on all platforms (Windows, too).
+# Exclusions are calculated first, inclusions later.
+
+exclude = '''
+(
+    \.git
+  | test/
+)
+'''

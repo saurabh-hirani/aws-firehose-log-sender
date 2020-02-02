@@ -1,0 +1,13 @@
+{
+  "TMPL_VAR_LOG_TIMESTAMP": "log_timestamp",
+  "TMPL_VAR_LOG_NUMBER": "log_number",
+  "LOG_TIMESTAMP_FIELD": "log_timestamp",
+  "LOG_NUMBER_FIELD": "log_number",
+  "LOG_COUNT": 10,
+  "LOG_INTERVAL_MS": 10,
+  "LOG_LEVEL": "DEBUG",
+  "AWS_ASSUME_ROLE_SESSION_NAME": "test_firehose_log_sender",
+  "AWS_ASSUME_ROLE_DURATION_SEC": 900,
+  "AWS_REGION": "us-east-1",
+  "AWS_FIREHOSE_STREAM_NAME": "test-firehose"
+}

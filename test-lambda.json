@@ -1,0 +1,5 @@
+{
+    "AWS_ASSUME_ROLE_ARN": "arn:aws:iam::12345678:role/test-firehose-kinesis_agent",
+    "AWS_FIREHOSE_STREAM_NAME": "test-firehose"
+}
+
