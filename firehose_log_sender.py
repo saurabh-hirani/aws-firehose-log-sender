@@ -147,7 +147,7 @@ def lambda_handler(event, context):
     if response["FailedPutCount"] > 0:
         logger.error("failed_put_record_batch", extra={"response": response})
 
-    logger.debug("dumping_put_record_batch_response", extra={"response": response})
+    logger.info("dumping_put_record_batch_response", extra={"response": response})
 
     return "SUCCESS"
 
