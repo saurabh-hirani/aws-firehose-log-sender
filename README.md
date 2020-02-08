@@ -11,6 +11,16 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in same/different account. 
 
 1. Setup and activate virtualenv as per instructions provided [here](https://gist.github.com/saurabh-hirani/3a2d582d944a792d0e896892e0ee0dea).
 
+## Package for uploading to AWS
+
+- Run the following command
+
+  ```sh
+  # ./package.sh firehose_log_sender.py
+  ```
+
+  This will create a file ```firehose_log_sender.zip``` which can be used to upload to AWS Lambda.
+
 ## Test locally - receiver AWS account to receiver AWS account
 
 1. Ensure that you have the **receiver** AWS account infra setup - as explained in the [Pre-requisites](#pre-requisites) section.
