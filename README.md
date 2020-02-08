@@ -11,14 +11,13 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in another account. Also us
 
 1. Setup and activate virtualenv as per instructions provided [here](https://gist.github.com/saurabh-hirani/3a2d582d944a792d0e896892e0ee0dea)
 
-## Test locally
+## Test locally - receiver AWS account to receiver AWS account
 
-Before sending cross account (sender AWS account to receiver AWS account), try out this setup to send directly to the receiver AWS account from
-your laptop.
+1. Ensure that you have the **receiver** AWS account infra setup - as explained in the [Pre-requisites](#pre-requisites) section.
 
-1. Ensure that you have the AWS credentials set in your environment for the receiver AWS account which hosts the AWS Kinesis firehose.
+2. Ensure that you have the AWS credentials set in your environment for the **receiver** AWS account which hosts the AWS Kinesis firehose.
 
-2. Update the config file ```test-localhost.json``` if required:
+3. Update the config file ```test-localhost.json``` if required:
 
     ```sh
     {
@@ -43,7 +42,7 @@ your laptop.
     |    5    | AWS_REGION               | AWS region to use while creating AWS session                                         |
     |    6    | AWS_FIREHOSE_STREAM_NAME | AWS Firehose stream to send logs to                                                  |
 
-3. Run the following command:
+4. Run the following command:
 
     ```sh
     ./test-localhost.sh test-localhost.json
@@ -66,13 +65,15 @@ your laptop.
     }
     ```
 
-4. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
+5. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
 
-## Test cross account
+## Test cross account - sender AWS account to receiver AWS account
 
-1. Ensure that you have the AWS credentials set in your environment for the sender AWS account which hosts the AWS Kinesis firehose.
+1. Ensure that you have this Lambda deployed in the **sender** AWS account - as explained in the [Pre-requisites](#pre-requisites) section.
 
-2. Update the config file ```test-lambda.json``` if required:
+2. Ensure that you have the AWS credentials set in your environment for the **sender** AWS account which hosts this Lambda.
+
+3. Update the config file ```test-lambda.json``` if required:
 
     ```sh
     {
@@ -88,14 +89,14 @@ your laptop.
     |    1    | AWS_ASSUME_ROLE_ARN      | AWS role to assume of the receiver AWS account                                       |
     |    2    | AWS_FIREHOSE_STREAM_NAME | AWS Firehose stream to send logs to                                                  |
 
-3. Run the following command:
+4. Run the following command:
 
     ```sh
     export AWS_DEFAULT_REGION=us-east-1
     ./test-lambda.sh test-lambda.json
     ```
 
-4. You should see a response like the following:
+5. You should see a response like the following:
 
     ```sh
     {
@@ -105,4 +106,4 @@ your laptop.
     Lambda function returned "SUCCESS"
     ```
 
-5. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
+6. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
