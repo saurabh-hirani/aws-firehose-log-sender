@@ -2,11 +2,6 @@
 
 AWS Lambda to send logs to a Kinesis Firehose hosted in same/different account. Also used for testing [sender example](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender) setup for https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch
 
-## Pre-requisites
-
-1. Setup a receiver AWS account with AWS Kinesis Firehose as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/receiver).
-2. Setup a sender AWS account with this lambda as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender).
-
 ## Local setup
 
 1. Setup and activate virtualenv as per instructions provided [here](https://gist.github.com/saurabh-hirani/3a2d582d944a792d0e896892e0ee0dea).
@@ -20,6 +15,11 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in same/different account. 
   ```
 
   This will create a file ```firehose_log_sender.zip``` which can be used to upload to AWS Lambda.
+
+## Pre-requisites
+
+1. Setup a receiver AWS account with AWS Kinesis Firehose as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/receiver).
+2. Setup a sender AWS account with this lambda as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender).
 
 ## Test locally - receiver AWS account to receiver AWS account
 
