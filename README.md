@@ -4,8 +4,8 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in another account. Also us
 
 ## Pre-requisites
 
-1. Setup a receiver AWS account with AWS Kinesis Firehose as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/receiver)
-2. Setup a sender AWS account with this lambda as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender)
+1. Setup a receiver AWS account with AWS Kinesis Firehose as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/receiver).
+2. Setup a sender AWS account with this lambda as described [here](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender).
 
 ## Local setup
 
@@ -65,7 +65,7 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in another account. Also us
     }
     ```
 
-5. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
+5. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards in the **receiver** AWS account to verify if logs have reached the destination.
 
 ## Test cross account - sender AWS account to receiver AWS account
 
@@ -106,4 +106,4 @@ AWS Lambda to send logs to a Kinesis Firehose hosted in another account. Also us
     Lambda function returned "SUCCESS"
     ```
 
-6. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards to verify if logs have reached the destination.
+6. Check AWS Kinesis Firehose and AWS Elasticsearch dashboards in the **receiver** AWS account to verify if logs have reached the destination.
