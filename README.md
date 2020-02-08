@@ -1,6 +1,6 @@
 # aws-firehose-log-sender
 
-AWS Lambda to send logs to a Kinesis Firehose hosted in same/differnt account. Also used for testing [sender example](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender) setup for https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch
+AWS Lambda to send logs to a Kinesis Firehose hosted in same/different account. Also used for testing [sender example](https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch/tree/master/examples/sender) setup for https://github.com/saurabh-hirani/terraform-aws-firehose-elasticsearch
 
 ## Pre-requisites
 
